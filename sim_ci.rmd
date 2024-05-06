@@ -1,0 +1,13 @@
+mean <- 35
+std_dev <- 10
+
+normal_samples <- rnorm(100000, mean, std_dev)
+
+
+# Calculate the confidence interval
+confidence_level <- 0.80
+confidence_interval <- quantile(normal_samples, c((1 - confidence_level) / 2, 1 - (1 - confidence_level) / 2))
+
+cat("80% Confidence Interval")
+cat("Lower Bound:", confidence_interval[1], "\n")
+cat("Upper Bound:", confidence_interval[2], "\n")
