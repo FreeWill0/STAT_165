@@ -11,3 +11,5 @@ confidence_interval <- quantile(normal_samples, c((1 - confidence_level) / 2, 1 
 cat("80% Confidence Interval")
 cat("Lower Bound:", confidence_interval[1], "\n")
 cat("Upper Bound:", confidence_interval[2], "\n")
+
+plot(density(normal_samples), main = "Simulation based on Normal Distribution", xlab = "Number of Gold Medal", ylab = "Density", col = "blue", lwd = 2)
